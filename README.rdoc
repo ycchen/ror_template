@@ -69,3 +69,25 @@ $ rake db:migrate
 
 # Editing post migration script
 # Added relationship on the Model Post and User
+
+# Adding API 
+1. create app\controllers\api folder
+2. create app\controllers\api\feeds_controller.rb file
+
+module Api
+	class FeedsController < ApplicationController
+		respond_to :json
+		
+		def index
+			posts = Post.all
+			# respond_with Post.all
+			respond_with posts
+		end
+	end
+end
+
+3. modified routes.rb to add api routes
+
+  namespace :api, defaults: {format: 'json'} do
+  	resources :feeds		
+  end

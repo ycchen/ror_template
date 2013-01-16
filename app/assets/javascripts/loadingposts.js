@@ -13,7 +13,7 @@ function fetch_posts(div){
 
 			recent_page++;
 		}
-	});
+	});// end of .ajax calls
 }
 
 $(function(){
