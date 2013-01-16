@@ -1,0 +1,194 @@
+<div class="main-image">
+	<%= image_tag('welcome.jpg') %>
+</div> 
+
+<!--  
+<div class="hero-unit">
+	<h1>Hello, world!</h1>
+	<p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+	<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+ -->
+<div class="root">
+	<div class="row">
+		<div class="span12">
+			<div class="row">
+				<div class="span8">
+					<div class='grey-box'>
+           	 			<h3>What's Being Posted Right Now!</h3>
+            			<hr />
+            			<div id="recent_posts"></div>
+            			<div id="recent-loading_posts" class="hide"></div>
+            			<%= link_to "Load More", root_path, :remote => true, :class=> "btn offset1 span5", :id => "recent_load_more" %>
+            			<br/>
+            		</div>
+				</div>
+				<div class="span4">
+					<div class='black-transparent-box'>
+			            <h3>Welcome to PointsFeed</h3>
+			            <hr />
+			            <p>
+			              Have too many social media platforms? PointsFeed allows you to combine
+			              your twitter, instagram, etc feeds into a single - easy to
+			              navigate interface. Check it out!
+			            </p>
+		            </div>
+		          	<br>
+					<div class='black-transparent-box'>
+			            <h3>Already a member?</h3>
+			            <hr />
+			            <form method='post' action='<%= new_user_session_path %>'>
+			              <input type='text' placeholder='Email' name='user[email]' />
+			              <input type='password' placeholder='Password' name='user[password]' />
+			              <br>
+			              <input type='submit' value='Sign In' class='btn btn-info' />
+			            </form>
+		          	</div>
+		          	<br>
+					<div class='black-transparent-box'>
+						<h3>Not yet a member?</h3>
+						<hr />
+						<form method='post' action=''>
+							<input type='text' placeholder='Display Name' name='user[display_name]' />
+							<input type='text' placeholder='Email' name='user[email]' />
+							<input type='password' placeholder='Password' name='user[password]' />
+							<input type='password' placeholder='Password Confirmation' name='user[password_confirmation]' />
+							<br>
+							<input type='submit' value='Create An Account' class='btn btn-warning' />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- 
+	<div class="btn-toolbar">
+	  <div class="btn-group">
+	    <a class="btn" href="#"><i class="icon-align-left"></i></a>
+	    <a class="btn" href="#"><i class="icon-align-center"></i></a>
+	    <a class="btn" href="#"><i class="icon-align-right"></i></a>
+	    <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+	  	<a class="btn" href="#"><i class="icon-envelope"></i></a>
+		<a class="btn" href="#"><i class="icon-search"></i></a>
+		<a class="btn" href="#"><i class="icon-flag"></i></a>
+		<a class="btn" href="#"><i class="icon-volume-down"></i></a>
+		<a class="btn" href="#"><i class="icon-volume-up"></i></a>
+	  </div>
+	</div>
+-->
+<!-- 
+<% require "faker" %>
+	<div class="row">	
+		<div class="span8">
+			<div class="black-transparent-box">
+				<% if current_user %>
+    				<pre><%= current_user.to_yaml %></pre>
+    			<% end %>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="black-transparent-box">
+				<h3>Faker</h3>
+				<ul>
+				<% 5.times do |n| %>
+					<li><%= Faker::Company.name %></li>
+				<% end %>
+				</ul>
+			</div>
+			<br/>
+			<div class="black-transparent-box">
+				<h3>Faker</h3>
+				<ul>
+				<% 15.times do |n| %>
+					<li><%= Faker::Company.name %></li>
+				<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+<!--
+ 	<div class="row">
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+	</div>
+
+	<div class="row">
+		<div class="span2">2</div>
+		<div class="span3">3</div>
+		<div class="span4">4</div>
+	</div> 
+
+
+	<div class="row">
+		<div class="span1">
+			<div class="grey-box">
+				<p>hello span1</p>
+			</div>
+		</div>
+		<div class="span2">
+			<div class="grey-box">
+				<p>hello span2</p>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="grey-box">
+				<p>hello span3</p>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="grey-box">
+				<p>hello span4</p>
+			</div>
+		</div>
+		<div class="span5">
+			<div class="grey-box">
+				<p>hello span5</p>
+			</div>
+		</div>
+		<div class="span6">
+			<div class="grey-box">
+				<p>hello span6</p>
+			</div>
+		</div>
+		<div class="span7">
+			<div class="grey-box">
+				<p>hello span7</p>
+			</div>
+		</div>
+		<div class="span8">
+			<div class="grey-box">
+				<p>hello span8</p>
+			</div>
+		</div>
+		<div class="span9">
+			<div class="grey-box">
+				<p>hello span9</p>
+			</div>
+		</div>
+		<div class="span10">
+			<div class="grey-box">
+				<p>hello span10</p>
+			</div>
+		</div>
+		<div class="span11">
+			<div class="grey-box">
+				<p>hello span11</p>
+			</div>
+		</div>
+		<div class="span12">
+			<div class="grey-box">
+				<p>hello span12</p>
+			</div>
+		</div>	
+	</div>
+-->

@@ -1,0 +1,34 @@
+
+<%= render :partial => 'shared/background' %>
+
+<div class="root">
+  <div class="row">
+    <div class="span6 offset3 grey-box well">
+      
+      <h3>Edit <%= resource_name.to_s.humanize %></h3>
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+          <%= f.error_notification %>
+
+          
+            <%= f.input :email, :placeholder => "Email Address", :required => true, :autofocus => true, :label => false %>
+            <%= f.input :current_password, :placeholder => "Current Password", :label => false, :required => true %>
+            <hr />
+            <%= f.input :password, :autocomplete => "off", :placeholder => "New Password", :required => false, :label => false %>
+            <%= f.input :password_confirmation, :placeholder => "New Password Confirmation", :required => false, :label => false %>
+            <hr />
+
+          <div>
+            <%= f.button :submit, "Update", :class => "btn btn-info" %>
+          </div>
+
+        <% end %>
+
+        <h3>Cancel my account</h3>
+
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+
+    </div>
+  </div>
+</div>
+
+

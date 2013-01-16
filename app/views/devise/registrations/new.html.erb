@@ -1,0 +1,27 @@
+
+<%= render :partial => 'shared/background' %>
+
+<div class="root">
+	<div class="row">
+		<div class="span6 offset3 grey-box well">
+			<h3>Sign up</h3>
+			<hr />
+			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			  <%= f.error_notification %>
+
+			  	<%= f.input :display_name, :placeholder => "Dispaly Name", :label => false, :required => true, :class => 'span5' %>
+			    <%= f.input :email, :placeholder => "Email Address", :required => true, :label => false, :autofocus => true, :class => 'span5' %>
+			    <%= f.input :password, :placeholder => "Password", :label => false, :required => true, :class => 'span5' %>
+			    <%= f.input :password_confirmation, :placeholder => "Password Confirmation", :label => false, :required => true, :class => 'span5' %>
+			  
+			  <hr/ >  
+			  <div>  
+			    <%= f.button :submit, "Create An Account", :class => "btn btn-warning btn-large span4" %>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+
+		</div>	
+	</div>
+</div>

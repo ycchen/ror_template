@@ -1,0 +1,23 @@
+
+<%= render :partial => 'shared/background' %>
+
+<div class="root">
+	<div class="row">
+		<div class="span6 offset3 grey-box well">
+			<h3>Sign In</h3>
+			<hr />
+			<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			    <%= f.input :email, :placeholder => "Email Address", :label => false, :required => false, :autofocus => true %>
+			    <%= f.input :password, :placeholder => "Passwrod", :label => false,:required => false %>
+			    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+			  
+			  <div class="form-actions">
+			    <%= f.button :submit, "Sign in", :class => "btn btn-info" %>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+
+		</div>
+	</div>
+</div>
