@@ -1,5 +1,22 @@
-<ul>
 <% @posts.each do |post| %>
-	<li><%= post.content %></li>
+	<div class='row'>
+		<div class="span7 well">
+			<div class="span1" style="margin-left: -3px">
+				<img src="<%= post.user.avatar %>"></img>	
+			</div>	
+			<div class="span4">
+				<span class="display-name"><a href="">Foo</a></span><br />
+				
+				<span class="text-message">
+					<%= post.content %>
+					<br /><br />
+				</span><br />
+
+				<span class="light">Posted: <%= time_ago_in_words(post.created_at) %></span><br/>
+
+			</div>
+			<div class="icons" style="float: right">icon
+			</div>
+		</div>
+	</div>
 <% end %>
-</ul>

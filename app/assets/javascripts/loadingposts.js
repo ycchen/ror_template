@@ -1,5 +1,6 @@
 var recent_page = 1;
 
+// ajax call function to fetch recent posts
 function fetch_posts(div){
 	$.ajax({
 		url: "/home/recentposts",
@@ -16,9 +17,11 @@ function fetch_posts(div){
 	});// end of .ajax calls
 }
 
+// When DOM is ready
 $(function(){
 	fetch_posts($('#recent_posts'));
 
+	// Add click to a DIV
 	$("#recent_load_more").live('click', function(e){
 		e.preventDefault();
 		fetch_posts($('#recent_posts'));

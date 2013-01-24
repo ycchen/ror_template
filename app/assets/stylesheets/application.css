@@ -35,3 +35,23 @@ body{
 .well{
 	color: #000;
 }
+
+.display-name {
+	font-size: 20px;
+}
+
+.text-message {
+	font-size: 15px;
+	color: #333;
+}
+
+.light {
+	font-size: 11px;
+	color: #AAA;
+}
+
+.avatar{
+	height: 20px;
+	margin-right: 1px;
+	margin-top: 0px;
+}

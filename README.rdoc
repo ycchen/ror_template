@@ -16,16 +16,20 @@ $ rails g controller home index
 # configure route for root config/routes.rb
 root :to => 'home#index'
 
-# setup layout file with navigation, and correspondence files such as js, css, and shared partial file
-looms
-# include bootstrap library
-# add gem 'bootstrap-sass-rails' into Gem file
-# Usage - Stylesheets : add following code to application.css
+setup layout file with navigation, and correspondence files such as js, css, and shared partial file
+
+1. include bootstrap library
+
+2. add gem 'bootstrap-sass-rails' into Gem file
+
+3. Usage - Stylesheets : add following code to application.css
+
 /*
  *= require twitter/bootstrap
  */
 or
 @import "twitter/bootstrap"
+
 In order to access to the vraibles within the Twitter Bootstrape framework
 
 # Usage - Javascript
@@ -58,17 +62,20 @@ $ rake -T
 
 # added display_name and background into models/User.rb as part of attr_accessible
 
-# modified views\devise\registrations\new.html.erb for Sign up route
-# modified views\devise\sessions\new.html.erb for Sign in route
-# added bootstrap layout for both files
-# added Sign in, Sign up, and Sign out link on navigation bar
+modified views\devise\registrations\new.html.erb for Sign up route
+
+modified views\devise\sessions\new.html.erb for Sign in route
+
+added bootstrap layout for both files
+
+added Sign in, Sign up, and Sign out link on navigation bar
 
 # *** Create posts Model
 $ rails g scaffold post title:string user_id:integer comment:text type:string content:text
 $ rake db:migrate
 
 # Editing post migration script
-# Added relationship on the Model Post and User
+Added relationship on the Model Post and User
 
 # Adding API 
 1. create app\controllers\api folder
@@ -91,3 +98,12 @@ end
   namespace :api, defaults: {format: 'json'} do
   	resources :feeds		
   end
+
+4. testing by calling URL as below
+
+http://localhost:3000/api/feeds
+
+# adding gravatar-ultimate gem to Gemfile
+1. updated user model to handle generate Avatar using gravatar-ultimate
+
+
