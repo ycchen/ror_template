@@ -17,3 +17,8 @@
 
 
 
+function success_notify(msg){
+	$('.alert-success').html(msg).slideDown('slow').delay(2000).slideUp('show');
+}
+
+$('.alert').delay(5000).slideUp('slow')
