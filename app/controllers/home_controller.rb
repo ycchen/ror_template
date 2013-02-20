@@ -7,6 +7,10 @@ class HomeController < ApplicationController
   	# 	# render :text => "Hello World"
   	# 	# redirect_to dashboard_path
   	# end
+    if current_user
+      redirect_to dashboard_path
+    end
+
   end
 
   def recentposts

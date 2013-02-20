@@ -106,4 +106,13 @@ http://localhost:3000/api/feeds
 # adding gravatar-ultimate gem to Gemfile
 1. updated user model to handle generate Avatar using gravatar-ultimate
 
+# added js to handle slide up the alert message
+$('.alert').delay(5000).slideUp('show')
+
+# added dashboard controller/view
+$ rails g controller dashboards show
+
+1. added resource :dashboard in config/routes.rb
+2. rake routes to check the routes are correct
+reference website http://guides.rubyonrails.org/routing.html
 

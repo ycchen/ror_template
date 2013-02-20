@@ -23,6 +23,23 @@ body{
     padding: 20px;
 }
 
+.black-transparent-box label{
+	color: #555;
+}
+
+.black-transparent-box li.active > a{
+	background-color: rgba(245,245,245,.93)
+}
+
+.black-transparent-box li > a{
+	color: #E0F2F7;
+}
+
+.black-transparent-box li > a:hover{
+	color: black;
+}
+
+
 .grey-box {
   background: rgba(245, 245, 245, .93);
   color: black;

@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  def background_image
+    background || "dashboard.jpg"
+  end
+
   def avatar
     Gravatar.new(self.email).image_url
   end

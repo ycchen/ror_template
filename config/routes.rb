@@ -1,5 +1,8 @@
 RorTemplate::Application.routes.draw do
   
+  
+  resource :dashboard
+  
   resources :posts do
   	collection do
   		get 'recentposts'
