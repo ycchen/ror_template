@@ -2,18 +2,24 @@ Welcome to ror_template
 
 Here are the steps to get this application up and running
 $ bundel install
+
 $ rake db:migrate
+
 $ rake db:seed
 
 
 Here are the steps and notes of how I create this applications
+
 # generate layout file
+
 $ rails g nifty:layout
 
 # generate landing page and controller
+
 $ rails g controller home index
 
 # configure route for root config/routes.rb
+
 root :to => 'home#index'
 
 setup layout file with navigation, and correspondence files such as js, css, and shared partial file
@@ -28,36 +34,49 @@ setup layout file with navigation, and correspondence files such as js, css, and
  *= require twitter/bootstrap
  */
 or
+
 @import "twitter/bootstrap"
 
 In order to access to the vraibles within the Twitter Bootstrape framework
 
 # Usage - Javascript
+
 # add following code to application.js
+
 //= require twitter/bootstrap
 
 
 # add shared/navigation as partial file
+
 $ touch shared/navigation.html.erb
 
 
 # add/modified application.html.erb with bootstrap layout
 
 # Generate devise gem
+
 $ rails g devise:install
 
 # *** Generate User model using devise
+
 $ rails g devise User
+
 # modified migration file for User model @ db/migrate/date_devise_create_users.rb
+
 # uncomment all of comment fields
+
 $ rake db:migrate
 
 # generate User view template
+
 $ rails g devise:views Users
 
 # check current routes
+
 $ rake routes
+
 # check rake command
+
 $ rake -T
 
 # added display_name and background into models/User.rb as part of attr_accessible
@@ -71,14 +90,19 @@ added bootstrap layout for both files
 added Sign in, Sign up, and Sign out link on navigation bar
 
 # *** Create posts Model
+
 $ rails g scaffold post title:string user_id:integer comment:text type:string content:text
+
 $ rake db:migrate
 
 # Editing post migration script
+
 Added relationship on the Model Post and User
 
 # Adding API 
+
 1. create app\controllers\api folder
+
 2. create app\controllers\api\feeds_controller.rb file
 
 module Api
@@ -104,15 +128,20 @@ end
 http://localhost:3000/api/feeds
 
 # adding gravatar-ultimate gem to Gemfile
+
 1. updated user model to handle generate Avatar using gravatar-ultimate
 
 # added js to handle slide up the alert message
+
 $('.alert').delay(5000).slideUp('show')
 
 # added dashboard controller/view
+
 $ rails g controller dashboards show
 
 1. added resource :dashboard in config/routes.rb
+
 2. rake routes to check the routes are correct
+
 reference website http://guides.rubyonrails.org/routing.html
 
