@@ -1,37 +1,19 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="posts">
+	<ul id="post_tabs" class="nav nav-tabs">
+		<li><a href="#text_post" data-toggle="tab">Text</a></li>
+		<li><a href="#link_post" data-toggle="tab">Link</a></li>
+		<li><a href="#image_post" data-toggle="tab">Image</a></li>
+	</ul>
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+	<div class="tab-content" id="tab-background">
+		<div class="tab-pane" id="text_post">
+			<%= render 'posts/types/form_text_post', :post => @post %>
+		</div>
+		<div class="tab-pane" id="link_post">
+			<%= render 'posts/types/form_link_post', :post => @post %>
+		</div>
+		<div class="tab-pane" id="image_post">
+			image post
+		</div>
+	</div>
+</div>

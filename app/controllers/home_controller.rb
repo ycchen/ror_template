@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
 
   def recentposts
-  	@posts = Post.all
+  	@posts = Post.order("created_at DESC")
   	render :layout => false
   end
   

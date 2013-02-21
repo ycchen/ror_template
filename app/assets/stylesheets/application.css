@@ -14,8 +14,9 @@
  *= require_tree .
  */
 
-body{
-	padding-top: 60px;
+body, p {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  padding-top: 60px;
 }
 
 .black-transparent-box {
@@ -39,11 +40,19 @@ body{
 	color: black;
 }
 
-
 .grey-box {
   background: rgba(245, 245, 245, .93);
   color: black;
   padding: 20px;
+}
+
+.grey-box label{
+	color: black;
+}
+
+.grey-box hr {
+	background-color: #49708A;
+	height: 3px;
 }
 
 .root {
@@ -67,8 +76,31 @@ body{
 	color: #AAA;
 }
 
+.full_width {
+	width: 95%;
+}
+
 .avatar{
 	height: 20px;
 	margin-right: 1px;
 	margin-top: 0px;
+}
+
+#post_tabs{
+	margin-bottom: 0px;
+}
+
+#text_post{
+	padding: 15px;
+	background: rgba(245, 245, 245, .93);
+}
+
+#link_post{
+  padding: 15px;
+  background: rgba(245, 245, 245, .93);
+}
+
+#image_post{
+  padding: 15px;
+  background: rgba(245, 245, 245, .93);
 }

@@ -1,0 +1,14 @@
+<%= simple_form_for(resource, :as => resource, :url => registration_path(resource), :html => { :method => :put }) do |f| %>
+            <%= f.input :email, :placeholder => "Email Address", :required => true, :autofocus => true, :label => false %>
+            <%= f.input :current_password, :placeholder => "Current Password", :label => false, :required => true %>
+            <hr />
+            <%= f.input :password, :autocomplete => "off", :placeholder => "New Password", :required => false, :label => false %>
+            <%= f.input :password_confirmation, :placeholder => "New Password Confirmation", :required => false, :label => false %>
+            <hr />
+
+          <div class='form-actions'>
+            <%= f.button :submit, "Update", :class => "btn btn-info" %>
+          </div>
+
+
+<% end %>

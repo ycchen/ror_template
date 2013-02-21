@@ -9,8 +9,11 @@ RorTemplate::Application.routes.draw do
   	end
   end
   
-  namespace :api, defaults: {format: 'json'} do
-  	resources :feeds		
+  #namespace :api , defaults: {format: 'json'} do 
+  namespace :api  do 
+  	resources :feeds
+
+    resources :posts	
   end
 
   match 'home/recentposts'

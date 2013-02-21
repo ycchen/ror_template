@@ -145,3 +145,103 @@ $ rails g controller dashboards show
 
 reference website http://guides.rubyonrails.org/routing.html
 
+# setup test db
+/*
+$ rake db:test:prepare
+$ rake db:test:load
+$ rake db:test:purge
+$ rake db:test:clone
+$ rake db:test:clone_structure
+*/
+
+/*
+$ rake test:units
+$ rake test:functionals
+$ rake test:integration
+$ rake test:plugins
+*/
+
+# To run performance tests
+
+/*
+$ rake test:benchmark
+$ rake test:profile
+*/
+
+# User model unit testing 
+/*
+$ ruby -Itest test/unit/user_test.rb
+$ ruby -Itest test/unit/user_test.rb -n test_the_truth
+*/
+# by adding validation to fix this failure test
+
+# Test rake command
+
+$ rake test:units
+
+# Creating and saving records examples
+
+method 1:
+/*
+my_record = MyClass.new
+my_record.col_1 = value_1
+my_record_col_2 = value_2
+*/
+
+method 2:
+
+/*
+my_record = MyClass.new(:col_1 => value_1, :col_2 => value_2)
+or
+my_record = MyClass.new(clo_1: value_1, col_2: value_2)
+my_record.save
+my_record.destroy
+*/
+
+method 3:
+
+/*
+my_record = MyClass.create(:col_1 => value_1, :col_2 => value_2)
+*/
+
+# Get record from the db
+/*
+	my_record = MyClass.find(:first)
+	my_records = MyClass.find(:all)
+	my_record = MyClass.find(id)
+	my_records = MyClass.find(id_1, id_2, ...)
+
+	record = MyClass.find_by_col_1(value_1)
+	record = MyClass.find_all_by_col_1(value_1)
+	record = MyClass.find_by_col_1_and_col_2(value_1, value_2)
+	record = MyClass.find_all_by_col_1_and_col_2(value_1, value_2)
+*/
+
+# update rails command
+
+/*
+update Gemfile to gem 'rails', '3.2.12'
+$ bundle update rails
+$ gem update rails
+*/
+
+== Adding cookies.js for Dashboard navigation purpose
+
+# Add /app/vendor/assets/javascripts/cookies.js plugin
+
+== Added api/api_controller.rb
+
+== Added api/posts_controller.rb
+
+== Modified api/feeds_controller.rb
+
+== Added relation_for() in /models/user.rb
+
+== Added text_posts model, link_post model, and image_post model
+
+/*
+class TextPost < Post
+  # attr_accessible :title, :body
+end
+*/
+== Added relationship between User model and text_posts model

@@ -1,0 +1,5 @@
+<% 10.times do |n| %>
+foo_<%= n %>:
+  display_name: foo_<%= n %>
+  email: foo_<%= n %>@example.com
+<% end %>
