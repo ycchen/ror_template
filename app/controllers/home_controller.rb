@@ -13,6 +13,10 @@ class HomeController < ApplicationController
 
   end
 
+  # def profile
+  #   @post = current_user.posts.new if current_user
+  # end
+
   def recentposts
   	@posts = Post.order("created_at DESC")
   	render :layout => false

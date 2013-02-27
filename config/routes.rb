@@ -21,5 +21,7 @@ RorTemplate::Application.routes.draw do
   devise_for :users
   root :to => 'home#index'
 
-  
+  # this is to handle RoutingError in Rails 3
+  # Any other routes are handled here (as ActionDispatch prevents RoutingError from hitting ApplicationController::rescue_action).
+  match '*path(.:format)', :to => 'application#routing_error'  
 end

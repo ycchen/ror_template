@@ -19,7 +19,13 @@
 
 
 function success_notify(msg){
-	$('.alert-success').html(msg).slideDown('slow').delay(2000).slideUp('show');
+	$('.alert-success').html(msg).slideDown('slow').delay(2000).slideUp('slow');
 }
 
-$('.alert').delay(5000).slideUp('slow')
+function error_notify(msg){
+	$('.alert-error').html(msg).slideDown('slow').delay(2000).slideUp('slow');
+}
+
+
+
+$('.alert').delay(5000).slideUp('slow');
