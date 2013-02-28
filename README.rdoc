@@ -240,3 +240,5 @@ class TextPost < Post
 end
 
 == Added relationship between User model and text_posts model
+
+== Added test
